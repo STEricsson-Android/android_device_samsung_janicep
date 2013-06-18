@@ -3,6 +3,12 @@
    {
     "repository": "android_packages_apps_SamsungServiceMode",
     "target_path": "packages/apps/SamsungServiceMode"
+   },
+
+   {
+    "repository": "android_packages_apps_Nfc",
+    "target_path": "packages/apps/Nfc"
    }
+
 
 ]

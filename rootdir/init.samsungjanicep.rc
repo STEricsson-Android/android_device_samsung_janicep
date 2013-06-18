@@ -1,4 +1,4 @@
-import /init.samsungjanice.usb.rc
+import /init.samsungjanicep.usb.rc
 
 on early-init
     export EXTERNAL_STORAGE /storage/sdcard0

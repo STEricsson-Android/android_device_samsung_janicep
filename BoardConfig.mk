@@ -1,9 +1,9 @@
 -include device/samsung/u8500-common/BoardCommonConfig.mk
 
-TARGET_BOARD_INFO_FILE := device/samsung/janice/board-info.txt
+TARGET_BOARD_INFO_FILE := device/samsung/janicep/board-info.txt
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/janice/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/janicep/bluetooth
 BOARD_USES_BLUETOOTH_HACK := true
 
 # Graphics
@@ -15,6 +15,10 @@ BOARD_USES_CAMERA_FIXES := true
 # Audio
 BOARD_HAS_MR0_STE_AUDIO := true
 TARGET_USES_STE_AUDIO := true
+
+# NFC
+
+BOARD_HAS_NFC := true
 
 # Kernel
 BOARD_KERNEL_PAGESIZE := 4096
@@ -51,11 +55,11 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 BOARD_HAVE_SAMSUNG_WIFI := true
 
 # Vibrator
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/janice/vibrator/vibrator.c
+# BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/janice/vibrator/vibrator.c
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/u8500
-TARGET_KERNEL_CONFIG := cyanogenmod_i9070_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_i9070p_defconfig
 
 
 # Vold
@@ -67,14 +71,14 @@ BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 BOARD_USES_COMMON_RIL := true
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/janice/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/janicep/recovery/recovery_keys.c
 BOARD_USES_COMMON_RECOVERY_GRAPHICS := true
 BOARD_USES_COMMON_RECOVERY := true
 # Assert
-TARGET_OTA_ASSERT_DEVICE := janice,i9070,GT-I9070
+TARGET_OTA_ASSERT_DEVICE := janicep,i9070P,GT-I9070P
 
 # Battery
 BOARD_USES_COMMON_BATERY := true
 
 # Inherit from the proprietary version
--include vendor/samsung/janice/BoardConfigVendor.mk
+-include vendor/samsung/janicep/BoardConfigVendor.mk

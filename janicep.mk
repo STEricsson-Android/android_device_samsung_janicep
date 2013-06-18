@@ -1,7 +1,7 @@
 # Include common makefile
 $(call inherit-product, device/samsung/u8500-common/common.mk)
 
-LOCAL_PATH := device/samsung/janice
+LOCAL_PATH := device/samsung/janicep
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -35,4 +35,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/keylayout/Vendor_04e8_Product_7021.kl:system/usr/keylayout/Vendor_04e8_Product_7021.kl
 
 # Use non-open-source parts if present
-$(call inherit-product-if-exists, vendor/samsung/janice/janice-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/u8500-common/janicep/janice-vendor.mk)

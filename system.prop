@@ -1,5 +1,5 @@
 #
-# system.prop for janice
+# system.prop for janicep
 #
 
 rild.libpath=/system/lib/libsec-ril.so
