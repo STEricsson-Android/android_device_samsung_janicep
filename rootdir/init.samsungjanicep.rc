@@ -49,7 +49,7 @@ on init
 
 on fs
 
-    mount_all /fstab.samsungjanice
+    mount_all /fstab.samsungjanicep
 	
     # Start CSPSA before synchronously running the factory reset utility that
     # checks the factory reset triggers in sysfs and CSPSA and then formats

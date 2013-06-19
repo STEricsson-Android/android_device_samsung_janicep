@@ -14,13 +14,27 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_PACKAGES += \
     GalaxyS2Settings
 
+PRODUCT_PACKAGES += \
+	com.android.nfc_extras \
+        libnfc \
+	libnfc_jni \
+	Nfc \
+        Tag
+# NFC
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+#NFCEE ACCESS CONTROL
+	NFCEE_ACCESS_PATH := device/samsung/u8500-common/NFC/nfcee_access.xml
+	NFCEE_ACCESS_PATH := device/samsung/u8500-common/NFC/nfcee_access_debug.xml
+
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.samsungjanice:root/fstab.samsungjanice \
-    $(LOCAL_PATH)/rootdir/init.samsungjanice.rc:root/init.samsungjanice.rc \
-    $(LOCAL_PATH)/rootdir/init.samsungjanice.usb.rc:root/init.samsungjanice.usb.rc \
+    $(LOCAL_PATH)/rootdir/fstab.samsungjanicep:root/fstab.samsungjanicep \
+    $(LOCAL_PATH)/rootdir/init.samsungjanicep.rc:root/init.samsungjanice.rcp \
+    $(LOCAL_PATH)/rootdir/init.samsungjanicep.usb.rc:root/init.samsungjanicep.usb.rc \
     $(LOCAL_PATH)/rootdir/prerecovery.rc:root/prerecovery.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.samsungjanice.rc:root/ueventd.samsungjanice.rc
+    $(LOCAL_PATH)/rootdir/ueventd.samsungjanicep.rc:root/ueventd.samsungjanicep.rc
 
 # RIL
 PRODUCT_COPY_FILES += \
