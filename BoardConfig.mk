@@ -72,7 +72,7 @@ BOARD_USES_COMMON_RIL := true
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/janicep/recovery/recovery_keys.c
-BOARD_USES_COMMON_RECOVERY_GRAPHICS := true
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/janicep/recovery/graphics.c
 BOARD_USES_COMMON_RECOVERY := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := janicep,i9070P,GT-I9070P
