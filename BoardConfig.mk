@@ -72,6 +72,7 @@ BOARD_USES_COMMON_RIL := true
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/janicep/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/janicep/recovery/graphics.c
 BOARD_USES_COMMON_RECOVERY_GRAPHICS := true
 BOARD_USES_COMMON_RECOVERY := true
 # Assert
