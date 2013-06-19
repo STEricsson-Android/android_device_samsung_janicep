@@ -16,6 +16,11 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/janice/full_janice.mk)
 
+
+PRODUCT_COPY_FILES +=  \
+    vendor/cm/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := janicep
 PRODUCT_NAME := cm_janicep
