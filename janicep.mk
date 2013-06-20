@@ -18,21 +18,37 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Packages
 PRODUCT_PACKAGES += \
-    	GalaxyS2Settings \
-    	com.android.nfc_extras \
-        libnfc \
+    	GalaxyS2Settings 
+    	
+# NFC
+PRODUCT_PACKAGES += \
+	libnfc \
 	libnfc_jni \
 	Nfc \
-     	Tag
+	Tag
 
-	
-# NFC
+# Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-#NFCEE ACCESS CONTROL
-	NFCEE_ACCESS_PATH := device/samsung/janicep/NFC/nfcee_access.xml
-	NFCEE_ACCESS_PATH := device/samsung/janicep/NFC/nfcee_access_debug.xml
+	packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
+
+# file that declares the MIFARE NFC constant
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+
+# NFC EXTRAS add-on API
+PRODUCT_PACKAGES += \
+	com.android.nfc_extras
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
+
+# NFCEE access control
+ifeq ($(TARGET_BUILD_VARIANT),user)
+	NFCEE_ACCESS_PATH := device/samsung/janicep/nfcee_access.xml
+else
+	NFCEE_ACCESS_PATH := device/samsung/janicep/nfcee_access_debug.xml
+endif
+PRODUCT_COPY_FILES += \
+	$(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
