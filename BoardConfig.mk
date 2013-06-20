@@ -5,6 +5,9 @@ TARGET_BOARD_INFO_FILE := device/samsung/janicep/board-info.txt
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/janicep/bluetooth
 
+# RIL
+BOARD_RIL_CLASS := ../../../device/samsung/janicep/ril/
+
 # Kernel
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x40000000
@@ -54,7 +57,7 @@ TARGET_PROVIDES_INIT_TARGET_RC := true
 
 
 # Vibrator
-# BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/janice/vibrator/vibrator.c
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/janicep/vibrator/vibrator.c
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/u8500

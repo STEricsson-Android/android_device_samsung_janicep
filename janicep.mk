@@ -1,8 +1,10 @@
 # Include common makefile
 $(call inherit-product, device/samsung/u8500-common/common.mk)
 
+ifneq ($(TARGET_SCREEN_HEIGHT),800)
 # Call cm.mk because somehow it's not being called!
-$(call inherit-product, device/samsung/janicep/cm.mk)
+$(call inherit-product, device/samsung/janice/cm.mk)
+endif
 
 
 LOCAL_PATH := device/samsung/janicep
@@ -16,21 +18,29 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Packages
 PRODUCT_PACKAGES += \
-    GalaxyS2Settings
-
-PRODUCT_PACKAGES += \
-	com.android.nfc_extras \
+    	GalaxyS2Settings \
+    	com.android.nfc_extras \
         libnfc \
 	libnfc_jni \
 	Nfc \
-        Tag
+     	Tag
+
+	
 # NFC
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
 	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
 #NFCEE ACCESS CONTROL
-	NFCEE_ACCESS_PATH := device/samsung/u8500-common/NFC/nfcee_access.xml
-	NFCEE_ACCESS_PATH := device/samsung/u8500-common/NFC/nfcee_access_debug.xml
+	NFCEE_ACCESS_PATH := device/samsung/janicep/NFC/nfcee_access.xml
+	NFCEE_ACCESS_PATH := device/samsung/janicep/NFC/nfcee_access_debug.xml
+
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
+    ro.ril.hsxpa=1 \
+    ro.ril.gprsclass=10
+    ro.telephony.ril_class=SamsungU8500RIL \
+    ro.telephony.sends_barcount=1
 
 # Init files
 PRODUCT_COPY_FILES += \
