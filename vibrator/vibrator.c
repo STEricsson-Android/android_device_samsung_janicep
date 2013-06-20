@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include <hardware_legacy/vibrator.h>
 #include "qemu.h"
 
 #include <stdio.h>
@@ -56,7 +55,7 @@ int vibrator_on(int timeout_ms)
 {
     /* constant on, up to maximum allowed time */
 	if(timeout_ms < 0)
-		return sendit(10000);
+		return sendit(15000);
 	return sendit(timeout_ms);
 }
 
