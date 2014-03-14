@@ -8,18 +8,11 @@ PRODUCT_RELEASE_NAME := GT-I9070P
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-TARGET_BOOTANIMATION_NAME := 480
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/janice/full_janice.mk)
-
-
-PRODUCT_COPY_FILES +=  \
-    vendor/cm/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
-
+$(call inherit-product, device/samsung/janicep/full_janice.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := janicep
@@ -29,4 +22,4 @@ PRODUCT_MODEL := GT-I9070P
 PRODUCT_MANUFACTURER := samsung
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9070P TARGET_DEVICE=GT-I9070P
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9070P TARGET_DEVICE=janicep
