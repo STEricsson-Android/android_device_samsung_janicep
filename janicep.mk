@@ -14,7 +14,7 @@ DEVICE_PACKAGE_OVERLAYS += $(JANICE_PATH)/overlay
 
 # STE
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ste_modem.sh:system/etc/ste_modem.sh
+    $(JANICE_PATH)/configs/ste_modem.sh:system/etc/ste_modem.sh
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
