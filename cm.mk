@@ -12,7 +12,7 @@ TARGET_SCREEN_WIDTH := 480
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/janicep/full_janice.mk)
+$(call inherit-product, device/samsung/janicep/full_janicep.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := janicep
