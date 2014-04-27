@@ -22,7 +22,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    GalaxySAdvanceSettings \
     Stk \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
