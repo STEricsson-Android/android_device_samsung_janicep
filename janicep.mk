@@ -40,7 +40,7 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.samsungjanice.rc:root/init.samsungjanice.rc \
-    $(JANICE_PATH)/rootdir/device_tunnables.rc:root/device_tunnables.rc \
+    $(JANICE_PATH)/rootdir/device_tunables.rc:root/device_tunables.rc \
     $(JANICE_PATH)/rootdir/fstab.samsungjanice:root/fstab.samsungjanice \
     $(JANICE_PATH)/rootdir/init.samsungjanice.usb.rc:root/init.samsungjanice.usb.rc \
     $(JANICE_PATH)/rootdir/init.recovery.samsungjanice.rc:root/init.recovery.samsungjanice.rc \
