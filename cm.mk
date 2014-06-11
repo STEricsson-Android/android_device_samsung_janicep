@@ -14,6 +14,12 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/janicep/full_janicep.mk)
 
+# Packages
+PRODUCT_PACKAGES += \
+    Stk \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := janicep
 PRODUCT_NAME := cm_janicep

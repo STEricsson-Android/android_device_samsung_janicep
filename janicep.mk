@@ -15,12 +15,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true
 
-# Packages
-PRODUCT_PACKAGES += \
-    Stk \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(JANICE_PATH)/configs/gps.conf:system/etc/gps.conf \
