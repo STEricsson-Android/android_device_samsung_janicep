@@ -1,5 +1,5 @@
-android_device_samsung_janice
-=============================
+android_device_samsung_janicep
+==============================
 
 CyanogenMod 11 Device Tree for Samsung Galaxy S Advance (GT-I9070P)
 

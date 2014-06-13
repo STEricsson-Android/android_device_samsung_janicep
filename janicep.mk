@@ -15,12 +15,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true
 
-# Packages
-PRODUCT_PACKAGES += \
-    Stk \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(JANICE_PATH)/configs/gps.conf:system/etc/gps.conf \
@@ -37,7 +31,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.samsungjanice.rc:root/init.samsungjanice.rc \
     $(JANICE_PATH)/rootdir/device_tunables.rc:root/device_tunables.rc \
     $(JANICE_PATH)/rootdir/fstab.samsungjanice:root/fstab.samsungjanice \
-    $(JANICE_PATH)/rootdir/init.samsungjanice.usb.rc:root/init.samsungjanice.usb.rc \
     $(JANICE_PATH)/rootdir/init.recovery.samsungjanice.rc:root/init.recovery.samsungjanice.rc \
     $(JANICE_PATH)/rootdir/ueventd.samsungjanice.rc:root/ueventd.samsungjanice.rc
 
@@ -48,8 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(JANICE_PATH)/configs/adm.sqlite-u8500:system/etc/adm.sqlite-u8500 \
-    $(JANICE_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+    $(JANICE_PATH)/configs/adm.sqlite-u8500:system/etc/adm.sqlite-u8500
 
 # NFC
 PRODUCT_PACKAGES += \
